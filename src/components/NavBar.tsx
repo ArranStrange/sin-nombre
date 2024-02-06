@@ -9,8 +9,8 @@ export default function NavBar() {
   };
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-50 flex flex-col h-24 max-w-[1240px] mx-auto my-16 px-4 py-4 text-white bg-transparent text-xl">
-      <div onClick={handleNav} className="flex m-10">
+    <div className="fixed top-0 left-0 z-50 flex flex-col max-w-[100px]  text-white bg-transparent text-xl">
+      <div onClick={handleNav} className="flex mt-3 ml-3">
         {nav ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
       </div>
       <ul className={`flex flex-col ${nav ? "block" : "hidden"}`}>

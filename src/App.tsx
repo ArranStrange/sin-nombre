@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import FindUs from "./components/FindUs";
 import Footer from "./components/Footer";
 import Landing from "./components/Landing";
