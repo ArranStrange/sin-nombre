@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ab25a693.css",
+    "main.js": "/static/js/main.5eebb936.js",
+    "static/media/ForestFeastival.png": "/static/media/ForestFeastival.50c8a650e8fdc2065699.png",
+    "static/media/landing-no-text.png": "/static/media/landing-no-text.b2b0a5c8122efe5cbd43.png",
+    "static/media/StickyFingers.png": "/static/media/StickyFingers.fbe6bc7b31743a93e70b.png",
+    "static/media/BigBanquet.png": "/static/media/BigBanquet.3b50329ea3be6f297cf1.png",
+    "static/media/Logo.png": "/static/media/Logo.b18c666b3ac2db6b2bb9.png",
+    "index.html": "/index.html",
+    "main.ab25a693.css.map": "/static/css/main.ab25a693.css.map",
+    "main.5eebb936.js.map": "/static/js/main.5eebb936.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ab25a693.css",
+    "static/js/main.5eebb936.js"
+  ]
+}
