@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import FindUs from "./components/FindUs";
+import Footer from "./components/Footer";
+import Landing from "./components/Landing";
+import NavBar from "./components/NavBar";
+import Carousel from "./components/Carousel";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App overflow-x-auto snap-x-mandatory">
+      <NavBar />
+      <div className="snap-center snap-align-start">
+        <Landing />
+      </div>
+      <div className="snap-center snap-align-start">
+        <FindUs />
+      </div>
+      <div className="snap-center snap-align-start">
+        <Carousel />
+      </div>
+      <Footer />
     </div>
   );
 }
