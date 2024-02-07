@@ -6,8 +6,12 @@ const Footer = () => {
       <div className="flex-grow">
         <div className="flex items-center justify-center  text-gray-300">
           {" "}
-          <FaFacebookSquare size={30} className="m-4" />
-          <FaInstagram size={30} className="m-4" />
+          <a href="https://www.facebook.com/SinNombreTaco/">
+            <FaFacebookSquare size={30} className="m-4" />
+          </a>
+          <a href="https://www.instagram.com/sinnombretaco/?hl=en">
+            <FaInstagram size={30} className="m-4" />
+          </a>
           <FaTwitterSquare size={30} className="m-4" />
         </div>
       </div>

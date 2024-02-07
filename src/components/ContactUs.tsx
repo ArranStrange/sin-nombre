@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { FaPen } from "react-icons/fa";
+import { useState } from "react";
 import { MdMessage } from "react-icons/md";
 import { AiOutlineClose } from "react-icons/ai";
 
@@ -15,7 +14,6 @@ export default function ContactUsDropdown() {
       <div className="relative">
         {dropdown && (
           <div className="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-95 z-40 flex justify-center items-center">
-            {/* FORM GOES HERE */}
             <div className="flex flex-row justify-center item-center h-screen">
               <fieldset className="flex flex-col justify-center text-center item-center">
                 <label id="name" className="text-white mr-8 ">
@@ -43,7 +41,7 @@ export default function ContactUsDropdown() {
                   className="text-center m-3 w-[250px] p-3 text-white bg-transparent border border-white-500 rounded-[10px]"
                 />
                 <label id="details" className="text-white">
-                  Event Details:
+                  Message:
                 </label>
                 <input
                   type="text"

@@ -29,5 +29,13 @@ h2 {
 }
 
 .snap-center {
-  scroll-snap-align: start;
+  scroll-snap-align: center;
+}
+
+.menu-container {
+  scroll-snap-type: x mandatory;
+}
+
+.menu-item {
+  scroll-snap-align: center;
 }

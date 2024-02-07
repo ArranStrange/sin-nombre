@@ -1,26 +1,20 @@
-import React from "react";
-import AboutUs from "./components/AboutUs";
 import Footer from "./components/Footer";
-import Landing from "./components/Landing";
+import Home from "./components/Home/Home";
 import NavDropDown from "./components/NavBar";
-import FindUSCarousel from "./components/FindUsCarousel";
 import ContactUsDropdown from "./components/ContactUs";
 import { Route, Routes, useLocation } from "react-router-dom";
+import MenuPage from "./components/MenuPage";
 
 function App() {
+  const location = useLocation();
   return (
     <div className="App overflow-x-auto snap-x-mandatory">
       <NavDropDown />
       <ContactUsDropdown />
-      <div className="snap-center snap-align-start">
-        <Landing />
-      </div>
-      <div className="snap-center snap-align-start">
-        <AboutUs />
-      </div>
-      <div className="snap-center snap-align-start">
-        <FindUSCarousel />
-      </div>
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<Home />} />
+        <Route path="/menu" element={<MenuPage />} />
+      </Routes>
       <Footer />
     </div>
   );
