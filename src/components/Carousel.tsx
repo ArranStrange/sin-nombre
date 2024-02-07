@@ -4,7 +4,7 @@ import ForestFeastival from "./assets/images/ForestFeastival.png";
 import StickyFingers from "./assets/images/StickyFingers.png";
 import { HiArrowSmRight, HiArrowSmLeft } from "react-icons/hi";
 
-const Carousel: React.FC = () => {
+const FindUSCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const images: string[] = [BigBanquet, ForestFeastival, StickyFingers];
   const imageTexts: string[] = [
@@ -28,7 +28,7 @@ const Carousel: React.FC = () => {
   };
 
   useEffect(() => {
-    const imageRotation = setInterval(handleNext, 10000);
+    const imageRotation = setInterval(handleNext, 4000);
     return () => clearInterval(imageRotation);
   }, []);
 
@@ -60,4 +60,4 @@ const Carousel: React.FC = () => {
   );
 };
 
-export default Carousel;
+export default FindUSCarousel;
