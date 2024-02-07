@@ -1,4 +1,4 @@
-export default function FindUs() {
+export default function AboutUs() {
   return (
     <div className="block h-screen">
       <div className="flex justify-center items-center h-[100%] text-white">

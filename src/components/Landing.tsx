@@ -14,7 +14,7 @@ export default function Landing() {
       >
         <img
           src={Logo}
-          className="pb-2 z-10 w-1/3 max-sm:w-1/3 max-lg:2/3"
+          className="pb-2 z-1 w-1/3 max-sm:w-1/3 max-lg:2/3"
           alt="Sin Nombre Logo"
         />
         {/* <h1 className="z-10 text-5xl items-center">Sin Nombre</h1> */}

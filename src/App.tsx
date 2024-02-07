@@ -1,10 +1,11 @@
 import React from "react";
-import FindUs from "./components/FindUs";
+import AboutUs from "./components/AboutUs";
 import Footer from "./components/Footer";
 import Landing from "./components/Landing";
 import NavDropDown from "./components/NavBar";
-import FindUSCarousel from "./components/Carousel";
+import FindUSCarousel from "./components/FindUsCarousel";
 import ContactUsDropdown from "./components/ContactUs";
+import { Route, Routes, useLocation } from "react-router-dom";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <Landing />
       </div>
       <div className="snap-center snap-align-start">
-        <FindUs />
+        <AboutUs />
       </div>
       <div className="snap-center snap-align-start">
         <FindUSCarousel />

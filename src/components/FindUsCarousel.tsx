@@ -15,11 +15,13 @@ const FindUSCarousel: React.FC = () => {
   const imageTexts3: string[] = ["Caldicot Castle", "Merthyr Mawr", "Roath"];
   const imageTexts2: string[] = ["Big Banquet", "Forest Feastival", "Cardiff"];
 
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex + 1 === images.length ? 0 : prevIndex + 1
-    );
-  };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 7000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const handlePrevious = () => {
     setCurrentIndex((prevIndex) =>
@@ -27,10 +29,11 @@ const FindUSCarousel: React.FC = () => {
     );
   };
 
-  useEffect(() => {
-    const imageRotation = setInterval(handleNext, 4000);
-    return () => clearInterval(imageRotation);
-  }, []);
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex + 1 === images.length ? 0 : prevIndex + 1
+    );
+  };
 
   return (
     <div className="block h-screen text-white bg-black overflow-hidden relative">
@@ -51,7 +54,7 @@ const FindUSCarousel: React.FC = () => {
       {/* Overlay Text */}
       <div className="absolute inset-0 flex flex-col justify-center items-center w-full h-screen">
         <h2 className="text-white z-10 text-xl">{imageTexts2[currentIndex]}</h2>
-        <h1 className=" text-white z-10 font-bold text-[30px]">
+        <h1 className="text-white z-10 font-bold text-[30px]">
           {imageTexts[currentIndex]}
         </h1>
         <h2 className="text-white z-10 text-xl">{imageTexts3[currentIndex]}</h2>
