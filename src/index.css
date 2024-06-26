@@ -41,4 +41,5 @@ h2 {
 .menu-item {
   scroll-snap-align: center;
   overflow-x: mandatory;
+  max-width: 45%;
 }

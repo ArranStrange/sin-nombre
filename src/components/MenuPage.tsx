@@ -103,7 +103,7 @@ export default function Menu() {
       >
         <div
           id="Loaded Fries"
-          className="menu-item relative group flex justify-center sm:w-1/4 md:w-1/5 lg:w-1/5"
+          className="menu-item relative group flex justify-center sm:w-1/4 md:w-1/5 lg:w-1/5 min-w-1/5"
         >
           <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center text-xl z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-300 drop-shadow-lg">
             Achiote Beef Loaded Fries
