@@ -7,17 +7,17 @@ const Footer = () => {
         <div className="flex items-center justify-center  text-gray-300">
           {" "}
           <a href="https://www.facebook.com/SinNombreTaco/">
-            <FaFacebookSquare size={30} className="m-4" />
+            <FaFacebookSquare size={30} className="m-4 drop-shadow-lg" />
           </a>
           <a href="https://www.instagram.com/sinnombretaco/?hl=en">
-            <FaInstagram size={30} className="m-4" />
+            <FaInstagram size={30} className="m-4 drop-shadow-lg" />
           </a>
-          <FaTwitterSquare size={30} className="m-4" />
+          <FaTwitterSquare size={30} className="m-4 drop-shadow-lg" />
         </div>
       </div>
 
       <div className="text-white pb-2 mt-auto">
-        <div className="container mx-auto text-center">
+        <div className="container mx-auto text-center drop-shadow-lg ">
           &copy; 2024 Sin Nombre
         </div>
       </div>

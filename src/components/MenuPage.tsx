@@ -15,13 +15,13 @@ export default function Menu() {
   return (
     <div
       id="Tacos"
-      className="menu-container relative pt-14 overflow-x-scroll"
+      className="menu-container reletive pt-14 overflow-x-scroll"
       style={{
         backgroundImage: `url(${MenuBackground})`,
         backgroundSize: "cover",
       }}
     >
-      <h1 className="text-xl text-white text-center pb-2 opacity-100 group-hover:opacity-0 transition-opacity duration-300">
+      <h1 className="text-xl text-white text-center pb-2 opacity-100 group-hover:opacity-0 transition-opacity duration-300 drop-shadow-lg">
         Tacos
       </h1>
       <div
@@ -32,7 +32,7 @@ export default function Menu() {
           id="Beef Taco"
           className="menu-item relative group flex justify-center sm:w-screen sm:h-screen lg:w-1/5 lg:h-auto scroll-snap-align-center"
         >
-          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white justify-center items-center text-xl z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-300">
+          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white justify-center items-center text-xl z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-300 drop-shadow-lg">
             Achiote Beef Taco
           </h1>
           <img
@@ -42,7 +42,7 @@ export default function Menu() {
           />
           <div className="absolute inset-0 bg-black opacity-0 transition-opacity group-hover:opacity-85 rounded-3xl"></div>
           <div className="absolute inset-0 flex justify-center items-center text-white opacity-0 transition-opacity group-hover:opacity-100 rounded-3xl">
-            <h2 className="w-2/3 text-pretty">
+            <h2 className="w-2/3 text-pretty drop-shadow-lg">
               Achiote marinated Pulled Beef Served with Roast Tomatillo Salsa,
               Chimichurri, Guacamole & Blue Corn Tortillas
             </h2>
@@ -53,13 +53,13 @@ export default function Menu() {
           id="Fish Taco"
           className="menu-item relative group flex justify-center sm:w-screen sm:h-screen lg:w-1/5 lg:h-auto scroll-snap-align-center"
         >
-          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white justify-center items-center text-xl z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-300">
+          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white justify-center items-center text-xl z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-300 drop-shadow-lg">
             Battered Sea Bass Taco
           </h1>
           <img src={FishTaco} alt="Sea Bass Taco" className="rounded-3xl" />
           <div className="absolute inset-0 bg-black opacity-0 transition-opacity group-hover:opacity-85 rounded-3xl"></div>
           <div className="absolute inset-0 flex justify-center items-center text-white opacity-0 transition-opacity group-hover:opacity-100 rounded-3xl">
-            <h2 className="w-2/3 text-pretty">
+            <h2 className="w-2/3 text-pretty drop-shadow-lg">
               Smoked paprika Tempura Cornish sea bass, roast tomatillo salsa ,
               guacamole, chimichurri & blue corn tortillas
             </h2>
@@ -70,7 +70,7 @@ export default function Menu() {
           id="Pork Belly Taco"
           className="menu-item relative group flex justify-center sm:w-screen sm:h-screen lg:w-1/5 lg:h-auto scroll-snap-align-center"
         >
-          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white justify-center items-center text-xl z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-300">
+          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white justify-center items-center text-xl z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-300 drop-shadow-lg">
             Confit Pork Belly & Pickled Squid Taco
           </h1>
           <img
@@ -80,7 +80,7 @@ export default function Menu() {
           />
           <div className="absolute inset-0 bg-black opacity-0 transition-opacity group-hover:opacity-85 rounded-3xl"></div>
           <div className="absolute inset-0 flex justify-center items-center text-white opacity-0 transition-opacity group-hover:opacity-100 rounded-3xl">
-            <h2 className="w-2/3 text-pretty pt-2">
+            <h2 className="w-2/3 text-pretty pt-2 drop-shadow-lg">
               Confit Pork Belly with a chipotle honey glaze cooked over coal ,
               pickled squid served with a caper Pico de gallo blue corn
               tortillas & salsa
@@ -90,7 +90,7 @@ export default function Menu() {
       </div>
 
       {/* SIDES */}
-      <h1 className="text-xl text-white text-center pb-2 pt-5 opacity-100 group-hover:opacity-0 transition-opacity duration-300 ">
+      <h1 className="text-xl text-white text-center pb-2 pt-5 opacity-100 group-hover:opacity-0 transition-opacity duration-300 drop-shadow-lg ">
         Side Dishes
       </h1>
       <div
@@ -101,7 +101,7 @@ export default function Menu() {
           id="Loaded Fries"
           className="menu-item relative group flex justify-center sm:w-screen sm:h-screen lg:w-1/5 lg:h-auto scroll-snap-align-center"
         >
-          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white justify-center items-center text-xl z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-300">
+          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white justify-center items-center text-xl z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-300 drop-shadow-lg">
             Achiote Beef Loaded Fries
           </h1>
           <img
@@ -111,7 +111,7 @@ export default function Menu() {
           />
           <div className="absolute inset-0 bg-black opacity-0 transition-opacity group-hover:opacity-85 rounded-3xl"></div>
           <div className="absolute inset-0 flex justify-center items-center text-white opacity-0 transition-opacity group-hover:opacity-100 rounded-3xl">
-            <h2 className="w-2/3 text-pretty">
+            <h2 className="w-2/3 text-pretty drop-shadow-lg">
               Pulled Beef Loaded Fries. Served with Garlic Aioli, Spiced Ketchup
               & Chimichurri.
             </h2>
@@ -122,13 +122,13 @@ export default function Menu() {
           id="Nachos"
           className="menu-item relative group flex justify-center sm:w-screen sm:h-screen lg:w-1/5 lg:h-auto scroll-snap-align-center"
         >
-          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white justify-center items-center text-xl z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-300">
+          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white justify-center items-center text-xl z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-300 drop-shadow-lg">
             Nacho
           </h1>
           <img src={Nachos} alt="Nachos" className="rounded-3xl" />
           <div className="absolute inset-0 bg-black opacity-0 transition-opacity group-hover:opacity-85 rounded-3xl"></div>
           <div className="absolute inset-0 flex justify-center items-center text-white opacity-0 transition-opacity group-hover:opacity-100 rounded-3xl">
-            <h2 className="w-2/3 text-pretty">
+            <h2 className="w-2/3 text-pretty drop-shadow-lg">
               Fresh cooked tortillas, tomatillo salsa, guacamole, spiced paprika
               salt, nacho cheese sauce & pickled jalapeno
             </h2>
@@ -139,7 +139,7 @@ export default function Menu() {
           id="Pork Belly Bites"
           className="menu-item relative group flex justify-center sm:w-screen sm:h-screen lg:w-1/5 lg:h-auto scroll-snap-align-center"
         >
-          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white justify-center items-center text-xl z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-300">
+          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white justify-center items-center text-xl z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-300 drop-shadow-lg">
             Crispy Pork Belly Bites
           </h1>
           <img
@@ -149,7 +149,7 @@ export default function Menu() {
           />
           <div className="absolute inset-0 bg-black opacity-0 transition-opacity group-hover:opacity-85 rounded-3xl"></div>
           <div className="absolute inset-0 flex justify-center items-center text-white opacity-0 transition-opacity group-hover:opacity-100 rounded-3xl">
-            <h2 className="w-2/3 text-pretty pt-2">
+            <h2 className="w-2/3 text-pretty pt-2 drop-shadow-lg">
               Crispy Pork Belly Bites with Chipotle Honey and Smoked Paprika Dip
             </h2>
           </div>
@@ -158,7 +158,7 @@ export default function Menu() {
           id="Scallops"
           className="menu-item relative group flex justify-center sm:w-screen sm:h-screen lg:w-1/5 lg:h-auto scroll-snap-align-center"
         >
-          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white justify-center items-center text-xl z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-300">
+          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white justify-center items-center text-xl z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-300 drop-shadow-lg">
             BBQ Scallop in the Shell
           </h1>
           <img
@@ -168,7 +168,7 @@ export default function Menu() {
           />
           <div className="absolute inset-0 bg-black opacity-0 transition-opacity group-hover:opacity-85 rounded-3xl"></div>
           <div className="absolute inset-0 flex justify-center items-center text-white opacity-0 transition-opacity group-hover:opacity-100 rounded-3xl">
-            <h2 className="w-2/3 text-pretty pt-2">
+            <h2 className="w-2/3 text-pretty pt-2 drop-shadow-lg">
               BBQ Scallop Cooked Over coals with Chipotle, Marrow & Seasalt
               butter and a Pickled Fennel and Caper Slaw
             </h2>
@@ -178,13 +178,13 @@ export default function Menu() {
           id="Prawns"
           className="menu-item relative group flex justify-center sm:w-screen sm:h-screen lg:w-1/5 lg:h-auto scroll-snap-align-center"
         >
-          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white justify-center items-center text-xl z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-300">
+          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white justify-center items-center text-xl z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-300 drop-shadow-lg">
             BBQ Prawns
           </h1>
           <img src={Prawns} alt="BBQ Prawn" className="rounded-3xl" />
           <div className="absolute inset-0 bg-black opacity-0 transition-opacity group-hover:opacity-85 rounded-3xl"></div>
           <div className="absolute inset-0 flex justify-center items-center text-white opacity-0 transition-opacity group-hover:opacity-100 rounded-3xl">
-            <h2 className="w-2/3 text-pretty pt-2">
+            <h2 className="w-2/3 text-pretty pt-2 drop-shadow-lg">
               BBQ Scallop Cooked Over coals with Chipotle, Marrow & Seasalt
               butter and a Pickled Fennel and Caper Slaw
             </h2>
@@ -195,7 +195,7 @@ export default function Menu() {
           id="Loaded Halloumi"
           className="menu-item relative group flex justify-center sm:w-screen sm:h-screen lg:w-1/5 lg:h-auto scroll-snap-align-center"
         >
-          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white justify-center items-center text-xl z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-300">
+          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white justify-center items-center text-xl z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-300 drop-shadow-lg">
             Loaded Halloumi Fries
           </h1>
           <img
@@ -205,7 +205,7 @@ export default function Menu() {
           />
           <div className="absolute inset-0 bg-black opacity-0 transition-opacity group-hover:opacity-85 rounded-3xl"></div>
           <div className="absolute inset-0 flex justify-center items-center text-white opacity-0 transition-opacity group-hover:opacity-100 rounded-3xl">
-            <h2 className="w-2/3 text-pretty pt-2">
+            <h2 className="w-2/3 text-pretty pt-2 drop-shadow-lg">
               Halloumi Fries with Guacamole, Chimichurri, Parmesan & Spiced
               Ketchup
             </h2>

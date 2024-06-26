@@ -52,23 +52,27 @@ const FindUSCarousel: React.FC = () => {
         <HiArrowSmLeft onClick={handlePrevious} size={30} className="mt-2" />
         <HiArrowSmRight onClick={handleNext} size={30} className="mt-2" />
       </div>
-      <div className="flex justify-center z-10 w-full absolute top-10">
+      <div className="flex justify-center z-10 w-full absolute top-10 drop-shadow-lg">
         <h1>Where To Find Us</h1>
       </div>
       <div className="absolute inset-0 flex justify-center items-center overflow-hidden">
         <img
           alt="slideshow"
           src={images[currentIndex]}
-          className="object-cover h-full w-full"
+          className="object-cover h-full w-full drop-shadow-lg"
         />
       </div>
       {/* Overlay Text */}
       <div className="absolute inset-0 flex flex-col justify-center items-center w-full h-screen">
-        <h2 className="text-white z-9 text-xl">{imageTexts2[currentIndex]}</h2>
-        <h1 className="text-white z-9 font-bold text-[30px]">
+        <h2 className="text-white z-9 text-xl drop-shadow-lg">
+          {imageTexts2[currentIndex]}
+        </h2>
+        <h1 className="text-white z-9 font-bold text-[30px] drop-shadow-lg">
           {imageTexts[currentIndex]}
         </h1>
-        <h2 className="text-white z-9 text-xl">{imageTexts3[currentIndex]}</h2>
+        <h2 className="text-white z-9 text-xl drop-shadow-lg">
+          {imageTexts3[currentIndex]}
+        </h2>
       </div>
     </div>
   );

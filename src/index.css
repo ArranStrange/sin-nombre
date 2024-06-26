@@ -3,27 +3,29 @@
 @import "tailwindcss/utilities";
 
 @import url("https://use.typekit.net/fie5ekz.css");
+@import url("https://use.typekit.net/fie5ekz.css");
 
 html {
   scroll-snap-type: x mandatory;
 }
 
 body {
-  background-color: rgb(9, 9, 9);
-  font-family: "ivypresto-display", serif;
-  font-weight: 100;
+  background-color: #0e0e0e;
+  font-family: "new-spirit", serif;
+  font-weight: 700;
   font-style: normal;
   scroll-snap-type: x mandatory;
 }
 
 h1 {
-  font-family: "ivypresto-display", serif;
-  font-weight: 600;
+  font-family: "new-spirit", serif;
+  font-weight: 700;
   font-style: normal;
+  text-transform: uppercase;
 }
 
 h2 {
-  font-family: "ivypresto-display", serif;
+  font-family: "new-spirit", serif;
   font-weight: 200;
   font-style: normal;
 }
