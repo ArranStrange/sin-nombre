@@ -7,6 +7,13 @@ module.exports = {
         black: "#0e0e0e",
         orange: "#ed9c7b",
       },
+      screens: {
+        sm: "640px", // Default: 640px
+        md: "768px", // Default: 768px
+        lg: "1024px", // Default: 1024px
+        xl: "1280px", // Default: 1280px
+        "2xl": "1536px", // Default: 1536px
+      },
     },
   },
   plugins: [],

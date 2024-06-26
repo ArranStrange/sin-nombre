@@ -8,7 +8,7 @@ export default function AboutUs() {
           <br /> PRIVATE HIRE
         </h1>
         <h2 className="m-12 text-pretty w-2/5">
-          Authentic Mexican flavoures, cooked over fire with Welsh ingredients.{" "}
+          Authentic Mexican flavours, cooked over fire with Welsh ingredients.{" "}
           <br />
           Maecenas quis ornare dui, et faucibus felis. Maecenas sit amet
           pulvinar tellus, placerat malesuada diam. Suspendisse at feugiat urna.
