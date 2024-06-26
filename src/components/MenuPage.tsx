@@ -19,7 +19,7 @@ export default function Menu() {
   return (
     <>
       <div id="mains">
-        <h1 className="text-xl mt-12 text-white text-center pb-2 opacity-100 group-hover:opacity-0 transition-opacity duration-300 drop-shadow-lg">
+        <h1 className="text-xl mt-[75px] text-white text-center pb-2 opacity-100 group-hover:opacity-0 transition-opacity duration-300 drop-shadow-lg">
           Mains
         </h1>
       </div>
