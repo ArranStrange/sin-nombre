@@ -8,26 +8,22 @@ import PorkBellyBites from "./assets/images/Menu/PorkBellyBites.png";
 import Scallops from "./assets/images/Menu/Scallop.png";
 import Prawns from "./assets/images/Menu/Prawn.png";
 import LoadedHalloumi from "./assets/images/Menu/Loaded Halloumi Fries.png";
+import PorkBellyBurrito from "./assets/images/Menu/pork burrito.png";
+import BeefBurrito from "./assets/images/Menu/beef burrito.png";
+import HalloumiTaco from "./assets/images/Menu/Halloumi Taco.png";
+import BuffaloKingPrawns from "./assets/images/Menu/chiptole prawns.png";
 import MenuBackground from "./assets/images/Menu Background.png";
 import "../index.css";
 
 export default function Menu() {
   return (
-    <div
-      id="Tacos"
-      className="menu-container relative pt-14 overflow-x-scroll"
-      style={{
-        backgroundImage: `url(${MenuBackground})`,
-        backgroundSize: "cover",
-      }}
-    >
-      <h1 className="text-xl text-white text-center pb-2 opacity-100 group-hover:opacity-0 transition-opacity duration-300 drop-shadow-lg">
-        Tacos
-      </h1>
-      <div
-        id="mains"
-        className="flex flex-wrap justify-center items-center gap-4"
-      >
+    <>
+      <div id="mains">
+        <h1 className="text-xl mt-12 text-white text-center pb-2 opacity-100 group-hover:opacity-0 transition-opacity duration-300 drop-shadow-lg">
+          Mains
+        </h1>
+      </div>
+      <div className="flex flex-wrap justify-center items-center gap-4">
         <div
           id="Beef Taco"
           className="menu-item relative group flex justify-center sm:w-1/4 md:w-1/5 lg:w-1/5"
@@ -91,16 +87,80 @@ export default function Menu() {
             </h2>
           </div>
         </div>
+
+        <div
+          id="Halloumi Taco"
+          className="menu-item relative group flex justify-center sm:w-1/4 md:w-1/5 lg:w-1/5"
+        >
+          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center text-xl z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-300 drop-shadow-lg">
+            Smoked Chiptole & Tomato Halloumi Taco
+          </h1>
+          <img
+            src={HalloumiTaco}
+            alt="Halloumi Taco"
+            className="rounded-3xl overflow-hidden "
+          />
+          <div className="absolute inset-0 bg-black opacity-0 transition-opacity group-hover:opacity-85 rounded-3xl"></div>
+          <div className="absolute inset-0 flex justify-center items-center text-white opacity-0 transition-opacity group-hover:opacity-100 rounded-3xl">
+            <h2 className="w-2/3 text-pretty pt-2 drop-shadow-lg">
+              Smoked Chiptole & Tomato Marinaded Halloumi served with Roast
+              Tomatillo Salsa, Chimichurri, Guacamole & Blue Corn Tortillas
+            </h2>
+          </div>
+        </div>
+
+        <div
+          id="Pork Belly Burrito"
+          className="menu-item relative group flex justify-center sm:w-1/4 md:w-1/5 lg:w-1/5"
+        >
+          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center text-xl z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-300 drop-shadow-lg">
+            Spiced Beef Burrito
+          </h1>
+          <img
+            src={BeefBurrito}
+            alt="Pork Belly Burrito"
+            className="rounded-3xl overflow-hidden "
+          />
+          <div className="absolute inset-0 bg-black opacity-0 transition-opacity group-hover:opacity-85 rounded-3xl"></div>
+          <div className="absolute inset-0 flex justify-center items-center text-white opacity-0 transition-opacity group-hover:opacity-100 rounded-3xl">
+            <h2 className="w-2/3 text-pretty pt-2 drop-shadow-lg">
+              Spiced Pulled Beef, smoked Paprika & coriander rice served in a
+              flour tortilla, with salsa, pickles & lime
+            </h2>
+          </div>
+        </div>
+
+        <div
+          id="Pork Belly Burrito"
+          className="menu-item relative group flex justify-center sm:w-1/4 md:w-1/5 lg:w-1/5"
+        >
+          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center text-xl z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-300 drop-shadow-lg">
+            Confit Pork Belly Burrito
+          </h1>
+          <img
+            src={PorkBellyBurrito}
+            alt="Pork Belly Burrito"
+            className="rounded-3xl overflow-hidden "
+          />
+          <div className="absolute inset-0 bg-black opacity-0 transition-opacity group-hover:opacity-85 rounded-3xl"></div>
+          <div className="absolute inset-0 flex justify-center items-center text-white opacity-0 transition-opacity group-hover:opacity-100 rounded-3xl">
+            <h2 className="w-2/3 text-pretty pt-2 drop-shadow-lg">
+              Confit Pork Belly with a chipotle honey glaze cooked over coal,
+              served with smoked paprika & coriander rice served in a flour
+              tortilla, with salsa, pickles and lime
+            </h2>
+          </div>
+        </div>
       </div>
 
       {/* SIDES */}
-      <h1 className="text-xl text-white text-center pb-2 pt-5 opacity-100 group-hover:opacity-0 transition-opacity duration-300 drop-shadow-lg">
-        Side Dishes
-      </h1>
-      <div
-        id="sides"
-        className="flex flex-wrap justify-center items-center gap-4"
-      >
+      <div id="sides">
+        <h1 className="text-xl text-white text-center pb-2 pt-5 opacity-100 group-hover:opacity-0 transition-opacity duration-300 drop-shadow-lg">
+          Side Dishes
+        </h1>
+      </div>
+
+      <div className="flex flex-wrap justify-center items-center gap-4">
         <div
           id="Loaded Fries"
           className="menu-item relative group flex justify-center sm:w-1/4 md:w-1/5 lg:w-1/5 min-w-1/5"
@@ -225,7 +285,28 @@ export default function Menu() {
             </h2>
           </div>
         </div>
+
+        <div
+          id="Buffalo King Prawns"
+          className="menu-item relative group flex justify-center sm:w-1/4 md:w-1/5 lg:w-1/5"
+        >
+          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center text-xl z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-300 drop-shadow-lg">
+            Buffalo King Prawns
+          </h1>
+          <img
+            src={BuffaloKingPrawns}
+            alt="Loaded Halloumi"
+            className="rounded-3xl overflow-hidden "
+          />
+          <div className="absolute inset-0 bg-black opacity-0 transition-opacity group-hover:opacity-85 rounded-3xl"></div>
+          <div className="absolute inset-0 flex justify-center items-center text-white opacity-0 transition-opacity group-hover:opacity-100 rounded-3xl">
+            <h2 className="w-2/3 text-pretty pt-2 drop-shadow-lg">
+              Buffalo King Prawns with a sweet potato and toasted seed Slaw and
+              Salsa Macha dressing
+            </h2>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }

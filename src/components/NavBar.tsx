@@ -8,6 +8,7 @@ export default function NavDropDown() {
   const [nav, setNav] = useState(false);
   const location = useLocation();
   const isHomePage = () => location.pathname === "/";
+  const isMenuPage = () => location.pathname === "/menu";
 
   const handleNav = () => {
     setNav(!nav);
@@ -69,6 +70,31 @@ export default function NavDropDown() {
               Menu
             </LinkRouter>
           </li>
+
+          {isMenuPage() && (
+            <>
+              <li key="mains" className="ml-2 p-2 text-sm">
+                <LinkScroll
+                  to="mains"
+                  smooth={true}
+                  duration={500}
+                  onClick={handleNav}
+                >
+                  Mains
+                </LinkScroll>
+              </li>
+              <li key="sides" className="ml-2 p-2 text-sm">
+                <LinkScroll
+                  to="sides"
+                  smooth={true}
+                  duration={500}
+                  onClick={handleNav}
+                >
+                  Side Dishes
+                </LinkScroll>
+              </li>
+            </>
+          )}
 
           <li key="Contact" className="p-2">
             <LinkRouter to="/contact" onClick={handleNav}>

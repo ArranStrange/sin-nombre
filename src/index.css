@@ -30,6 +30,12 @@ h2 {
   font-style: normal;
 }
 
+@media screen and (max-width: 720px) {
+  h2 {
+    font-size: small;
+  }
+}
+
 .snap-center {
   scroll-snap-align: center;
 }
