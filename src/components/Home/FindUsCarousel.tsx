@@ -2,18 +2,41 @@ import React, { useState, useEffect } from "react";
 import BigBanquet from "../assets/images/BigBanquet.png";
 import ForestFeastival from "../assets/images/ForestFeastival.png";
 import StickyFingers from "../assets/images/StickyFingers.png";
+import RoyalWelshShow from "../assets/images/RoyalWelshShow.png";
+import RhostioCoffee from "../assets/images/Rhostio.png";
 import { HiArrowSmRight, HiArrowSmLeft } from "react-icons/hi";
 
 const FindUSCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const images: string[] = [BigBanquet, ForestFeastival, StickyFingers];
+  const images: string[] = [
+    BigBanquet,
+    ForestFeastival,
+    StickyFingers,
+    RoyalWelshShow,
+    RhostioCoffee,
+  ];
   const imageTexts: string[] = [
     "Street Food Circus",
     "Street Food Circus",
     "Sticky Fingers",
+    "The Royal Welsh",
+    "Rhostio",
   ];
-  const imageTexts3: string[] = ["Caldicot Castle", "Merthyr Mawr", "Roath"];
-  const imageTexts2: string[] = ["Big Banquet", "Forest Feastival", "Cardiff"];
+  const imageTexts3: string[] = [
+    "Caldicot Castle",
+    "Merthyr Mawr",
+    "Roath",
+    "Llanelwedd",
+    "Roath",
+  ];
+  const imageTexts2: string[] = [
+    "Big Banquet",
+    "Forest Feastival",
+    "Cardiff",
+    "Powys",
+    "Cardiff",
+  ];
+
   let interval: NodeJS.Timeout;
 
   useEffect(() => {

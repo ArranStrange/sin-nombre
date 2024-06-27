@@ -4,6 +4,9 @@ import NavDropDown from "./components/NavBar";
 import ContactUsDropdown from "./components/ContactUs";
 import { Route, Routes, useLocation } from "react-router-dom";
 import MenuPage from "./components/MenuPage";
+import Gallery from "./components/Gallery";
+import Events from "./components/Events/Events";
+import Enquire from "./components/Enquire";
 
 function App() {
   const location = useLocation();
@@ -14,6 +17,9 @@ function App() {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<MenuPage />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/Enquire" element={<Enquire />} />
       </Routes>
       <Footer />
     </div>

@@ -49,3 +49,15 @@ h2 {
   overflow-x: mandatory;
   max-width: 45%;
 }
+
+.content-box {
+  columns: 6 auto;
+  margin: 50px;
+  gap: 4;
+}
+
+@media screen and (max-width: 720px) {
+  .content-box {
+    columns: 3 auto;
+  }
+}

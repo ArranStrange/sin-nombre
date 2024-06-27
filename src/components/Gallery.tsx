@@ -1,0 +1,41 @@
+/// <reference types="webpack-env" />
+import React, { useState } from "react";
+import Modal from "../Utilities/Modal"; // Import the Modal component
+
+// Dynamically import all images from the gallery folder
+function importAll(r: __WebpackModuleApi.RequireContext): string[] {
+  return r.keys().map(r) as string[];
+}
+
+const images: string[] = importAll(
+  require.context("./assets/images/Gallery", false, /\.(png|jpe?g|svg)$/)
+);
+
+export default function Gallery() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const handleImageClick = (image: string) => {
+    setSelectedImage(image);
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+  };
+
+  return (
+    <div className="w-full min-h-screen py-20 after:h-5 after:w-5 after:absolute">
+      <main className="content-box">
+        {images.map((image, index) => (
+          <img
+            key={index}
+            className="w-full mb-4 rounded-lg cursor-pointer"
+            src={image}
+            alt={`Gallery image ${index + 1}`}
+            onClick={() => handleImageClick(image)}
+          />
+        ))}
+      </main>
+      {selectedImage && <Modal image={selectedImage} onClose={closeModal} />}
+    </div>
+  );
+}

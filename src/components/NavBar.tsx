@@ -16,21 +16,22 @@ export default function NavDropDown() {
 
   return (
     <>
-      <div className="absolute top-6 flex justify-center z-8">
+      <div className="absolute top-6 flex justify-center z-8 ">
         <img className="w-1/3 sm:w-1/6" src={Banner} alt="banner" />
       </div>
-      <div className="fixed top-0 z-20 flex flex-col max-w-[100px] text-white bg-transparent text-xl">
+      <div className="fixed top-0 z-20 flex flex-col max-w-[100px] text-white bg-transparent text-xl ">
         <div onClick={handleNav} className="flex mt-3 ml-3 left-0">
           {nav ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
         </div>
         <ul className={`flex flex-col ml-2 ${nav ? "block" : "hidden"}`}>
-          <li key="landing" className="p-2">
+          <li key="landing" className="p-2 drop-shadow-lg">
             {isHomePage() ? (
               <LinkScroll
                 to="landing"
                 smooth={true}
                 duration={500}
                 onClick={handleNav}
+                className="drop-shadow-lg"
               >
                 Home
               </LinkScroll>
@@ -42,7 +43,7 @@ export default function NavDropDown() {
           </li>
           {isHomePage() && (
             <>
-              <li key="About" className="ml-2 p-2 text-sm">
+              <li key="About" className="ml-2 p-2 text-sm drop-shadow-lg">
                 <LinkScroll
                   to="aboutus"
                   smooth={true}
@@ -52,7 +53,7 @@ export default function NavDropDown() {
                   About Us
                 </LinkScroll>
               </li>
-              <li key="FindUs" className="ml-2 p-2 text-sm">
+              <li key="FindUs" className="ml-2 p-2 text-sm drop-shadow-lg">
                 <LinkScroll
                   to="findus"
                   smooth={true}
@@ -65,7 +66,7 @@ export default function NavDropDown() {
             </>
           )}
 
-          <li key="Menu" className="p-2">
+          <li key="Menu" className="p-2 drop-shadow-lg">
             <LinkRouter to="/menu" onClick={handleNav}>
               Menu
             </LinkRouter>
@@ -73,7 +74,7 @@ export default function NavDropDown() {
 
           {isMenuPage() && (
             <>
-              <li key="mains" className="ml-2 p-2 text-sm">
+              <li key="mains" className="ml-2 p-2 text-sm drop-shadow-lg">
                 <LinkScroll
                   to="mains"
                   smooth={true}
@@ -83,7 +84,7 @@ export default function NavDropDown() {
                   Mains
                 </LinkScroll>
               </li>
-              <li key="sides" className="ml-2 p-2 text-sm">
+              <li key="sides" className="ml-2 p-2 text-sm drop-shadow-lg">
                 <LinkScroll
                   to="sides"
                   smooth={true}
@@ -96,9 +97,21 @@ export default function NavDropDown() {
             </>
           )}
 
-          <li key="Contact" className="p-2">
-            <LinkRouter to="/contact" onClick={handleNav}>
-              Contact
+          <li key="Events" className="p-2 drop-shadow-lg">
+            <LinkRouter to="/events" onClick={handleNav}>
+              Events
+            </LinkRouter>
+          </li>
+
+          <li key="Gallery" className="p-2 drop-shadow-lg">
+            <LinkRouter to="/gallery" onClick={handleNav}>
+              Gallery
+            </LinkRouter>
+          </li>
+
+          <li key="enquire" className="p-2 drop-shadow-lg">
+            <LinkRouter to="/enquire" onClick={handleNav}>
+              Enquire
             </LinkRouter>
           </li>
         </ul>
