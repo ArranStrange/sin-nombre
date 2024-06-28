@@ -16,6 +16,7 @@ export default function NavDropDown() {
 
   return (
     <>
+      {nav && <div className="fixed inset-0 bg-black opacity-80 z-20"></div>}
       <div className="absolute top-6 flex justify-center z-8 ">
         <img className="w-1/3 sm:w-1/6" src={Banner} alt="banner" />
       </div>

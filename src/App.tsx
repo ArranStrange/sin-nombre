@@ -7,6 +7,7 @@ import MenuPage from "./components/MenuPage";
 import Gallery from "./components/Gallery";
 import Events from "./components/Events/Events";
 import Enquire from "./components/Enquire";
+import Links from "./components/Home/Links";
 
 function App() {
   const location = useLocation();
@@ -21,6 +22,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/Enquire" element={<Enquire />} />
       </Routes>
+      <Links />
       <Footer />
     </div>
   );

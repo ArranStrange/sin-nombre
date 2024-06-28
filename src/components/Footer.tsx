@@ -1,4 +1,9 @@
-import { FaFacebookSquare, FaInstagram, FaTwitterSquare } from "react-icons/fa";
+import {
+  FaFacebookSquare,
+  FaInstagram,
+  FaTwitterSquare,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -7,12 +12,17 @@ const Footer = () => {
         <div className="flex items-center justify-center  text-gray-300">
           {" "}
           <a href="https://www.facebook.com/SinNombreTaco/">
-            <FaFacebookSquare size={30} className="m-4 drop-shadow-lg" />
+            <FaFacebookSquare
+              size={30}
+              className="m-4 mix-blend-difference drop-shadow-lg"
+            />
           </a>
           <a href="https://www.instagram.com/sinnombretaco/?hl=en">
             <FaInstagram size={30} className="m-4 drop-shadow-lg" />
           </a>
-          <FaTwitterSquare size={30} className="m-4 drop-shadow-lg" />
+          <a href="https://api.whatsapp.com/send?phone=%2B447710562967&app=facebook&entry_point=page_cta">
+            <FaWhatsapp size={30} className="m-4 drop-shadow-lg" />
+          </a>
         </div>
       </div>
 

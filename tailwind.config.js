@@ -14,6 +14,9 @@ module.exports = {
         xl: "1280px", // Default: 1280px
         "2xl": "1536px", // Default: 1536px
       },
+      animation: {
+        fadeIn: "fadeIn 2s ease-in forwards",
+      },
     },
   },
   plugins: [],

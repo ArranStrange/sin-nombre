@@ -1,6 +1,6 @@
 /// <reference types="webpack-env" />
-import React, { useState } from "react";
-import Modal from "../Utilities/Modal"; // Import the Modal component
+import React, { useEffect, useState } from "react";
+import Modal from "./Utilities/Modal";
 
 // Dynamically import all images from the gallery folder
 function importAll(r: __WebpackModuleApi.RequireContext): string[] {
@@ -21,6 +21,10 @@ export default function Gallery() {
   const closeModal = () => {
     setSelectedImage(null);
   };
+  useEffect(() => {
+    // Scroll to the top when component mounts
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="w-full min-h-screen py-20 after:h-5 after:w-5 after:absolute">

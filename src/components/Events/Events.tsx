@@ -25,15 +25,20 @@ export default function Events() {
       "_blank"
     );
   };
+  useEffect(() => {
+    // Scroll to the top when component mounts
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <div className="min-h-screen py-10">
+    <div className="min-h-screen py-10 mb-10">
       <div className="container mx-auto px-4">
         <h1 className="mb-6 mt-6 text-white">Event Listings</h1>
         <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {events.map((event) => (
             <div
               key={event.id}
-              className="shadow-md rounded-lg overflow-hidden"
+              className="shadow-xl rounded-lg overflow-hidden"
             >
               <img
                 src={event.thumbnail}

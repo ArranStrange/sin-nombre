@@ -1,6 +1,16 @@
 import { useState } from "react";
-import { MdMessage } from "react-icons/md";
+import { Link as LinkRouter, useLocation } from "react-router-dom";
+import { MdMessage, MdOutlineMailOutline } from "react-icons/md";
 import { AiOutlineClose } from "react-icons/ai";
+import { SiGoogleforms } from "react-icons/si";
+import { RiTwitterXFill } from "react-icons/ri";
+import {
+  FaFacebookMessenger,
+  FaFacebookSquare,
+  FaInstagram,
+  FaMailBulk,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 export default function ContactUsDropdown() {
   const [dropdown, setDropdown] = useState(false);
@@ -10,49 +20,60 @@ export default function ContactUsDropdown() {
   };
 
   return (
-    <div className="fixed top-0 right-0 z-20">
-      <div className="relative">
+    <div className="fixed top-0 right-0 z-20 ">
+      <div className="relativ ">
         {dropdown && (
-          <div className="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-95 z-40 flex justify-center items-center">
-            <div className="flex flex-row justify-center item-center h-screen">
-              <fieldset className="flex flex-col justify-center text-center item-center">
-                <label id="name" className="text-white mr-8 ">
-                  Name:
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  className="text-center m-3 w-[250px] p-3 text-white  bg-black bg-transparent border border-white-500 rounded-[10px]"
-                />
-                <label id="name" className="text-white">
-                  Email Address:
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="text-center m-3 w-[250px] p-3 text-white bg-transparent border border-white-500 rounded-[10px]"
-                />
-                <label id="name" className="text-white">
-                  Telephone Number:
-                </label>
-                <input
-                  type="tel"
-                  id="tel"
-                  className="text-center m-3 w-[250px] p-3 text-white bg-transparent border border-white-500 rounded-[10px]"
-                />
-                <label id="details" className="text-white">
-                  Message:
-                </label>
-                <input
-                  type="text"
-                  id="details"
-                  className="text-center m-3 w-[250px] h-[200px] p-3 text-white bg-black bg-transparent border border-white-500 rounded-[10px]"
-                />
-                <button className="text-center mx-auto m-1 p-2 w-[100px] text-black bg-white bg-transparent border border-white-500 rounded-[10px]">
-                  Submit
-                </button>
-              </fieldset>
-            </div>
+          <div className="bg-black opacity-80 w-screen h-screen flex flex-col items-end pt-14 pr-4">
+            <a
+              href="https://www.facebook.com/SinNombreTaco/"
+              onClick={handleDropdown}
+            >
+              <FaFacebookSquare
+                size={40}
+                style={{ zIndex: 60, color: "white" }}
+              />
+            </a>
+            <a href="https://www.instagram.com/sinnombretaco/?hl=en">
+              <FaInstagram
+                size={40}
+                style={{ zIndex: 60, color: "white", marginTop: "5px" }}
+              />
+            </a>
+            <a href="https://twitter.com/sinnombretaco?lang=en">
+              <RiTwitterXFill
+                size={40}
+                style={{ zIndex: 60, color: "white", marginTop: "5px" }}
+              />
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=%2B447710562967&app=facebook&entry_point=page_cta">
+              <FaWhatsapp
+                size={40}
+                style={{
+                  zIndex: 60,
+                  color: "white",
+                  marginTop: "5px",
+                  boxShadow: "10px 10px 10px rgba(0, 0, 0, 0)",
+                }}
+              />
+            </a>
+            <a href="https://www.facebook.com/messages/t/109799927883360">
+              <FaFacebookMessenger
+                size={40}
+                style={{ zIndex: 60, color: "white", marginTop: "5px" }}
+              />
+            </a>
+            <a href="mailto:neilgrimble@gmail.com">
+              <MdOutlineMailOutline
+                size={45}
+                style={{ zIndex: 60, color: "white", marginTop: "5px" }}
+              />
+            </a>
+            <LinkRouter to="/enquire" onClick={handleDropdown}>
+              <SiGoogleforms
+                size={42}
+                style={{ zIndex: 60, color: "white", marginTop: "5px" }}
+              />
+            </LinkRouter>
           </div>
         )}
         <div
@@ -60,9 +81,15 @@ export default function ContactUsDropdown() {
           onClick={handleDropdown}
         >
           {dropdown ? (
-            <AiOutlineClose size={30} style={{ zIndex: 60, color: "white" }} />
+            <AiOutlineClose
+              size={30}
+              style={{ zIndex: 60, color: "white", marginRight: "10px" }}
+            />
           ) : (
-            <MdMessage size={35} style={{ zIndex: 60, color: "white" }} />
+            <MdMessage
+              size={35}
+              style={{ zIndex: 60, color: "white", marginRight: "5px" }}
+            />
           )}
         </div>
       </div>

@@ -1,26 +1,123 @@
-import Knives from "../assets/images/Knives.png";
-import Logo3 from "../assets/images/Logo3.png";
+import React, { useState, useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
-export default function AboutUs() {
+const AboutUs: React.FC = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    threshold: 0.8,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
+
+  const defaultText =
+    "Authentic Mexican flavours. Welsh ingredients. Cooked over fire.";
+
+  const texts: string[] = [
+    "Bespoke catering, we work closely with our couples to make their vision a reality. Mexican wedding catering prepared with care to make your day memorable.",
+    "Bringing years of experience in the festival circuit, from small independent festivals to national events, we've got the tacos covered.",
+    "Kitchen Takeovers, one-off events and long-term residencies. Authentic Mexican Street Food brought to you.",
+    "Tailored menus for private or corporate events. Fresh ingredients, real Mexican flavours, cooked with flames.",
+  ];
+
+  const [currentText, setCurrentText] = useState<string>(defaultText);
+  const [selectedButton, setSelectedButton] = useState<number | null>(null);
+
+  const handleClick = (index: number) => {
+    setCurrentText(texts[index]);
+    setSelectedButton(index);
+  };
+
+  const formatTextWithLineBreaks = (text: string): string => {
+    return text.split(". ").join(".<br />");
+  };
+
   return (
-    <div id="aboutus" className="flex flex-col h-screen w-full items-center">
-      {/* <img
-        src={Knives}
-        alt="Sin Nombre Knives image"
-        className=" w-[150px] mt-[-30px]"
-      /> */}
-      <div className="z-1 flex flex-row justify-center items-center lg:w-[50%] sm:w-[80%] h-[100%] bg-black text-white ">
-        <h1 className="hover:text-orange w-1/2 ml-10">
-          WEDDINGS <br /> FESTIVALS <br />
-          POP-UPS
-          <br /> PRIVATE HIRE
-        </h1>
-        <h2 className="m-10 text-pretty w-1/2 text-justify">
-          Authentic Mexican flavours. Welsh ingredients. Cooked over fire.{" "}
-          Maecenas quis ornare dui, et faucibus felis. Maecenas sit amet
-          pulvinar tellus, placerat malesuada diam.
-        </h2>
+    <>
+      <div
+        id="aboutus"
+        className="flex flex-col h-[400px] w-full bg-black items-center"
+      >
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: 2 }}
+          ref={ref}
+          className="mt-[-50px] z-1 flex flex-row justify-center items-center lg:w-[90%] sm:w-[50%] h-2/3 bg-transparent text-white"
+        >
+          <h1
+            className="text-xl sm:w-[90%] lg:w-[70%] text-center text-wrap"
+            dangerouslySetInnerHTML={{
+              __html: formatTextWithLineBreaks(currentText),
+            }}
+          ></h1>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: 2 }}
+          ref={ref}
+          className="z-1 flex flex-row justify-center items-end mb-5 sm:w-[70%] lg:w-[50%] bg-transparent text-white"
+        >
+          <button
+            className={`max-max-w-[210px] min-w-[190px] ml-3 border rounded-xl ${
+              selectedButton === 0
+                ? "text-orange border-orange"
+                : "hover:text-orange hover:border-orange"
+            }`}
+            onClick={() => handleClick(0)}
+          >
+            WEDDINGS
+          </button>
+          <button
+            className={`max-w-[220px] min-w-[190px] ml-3 border rounded-xl sm:text-lg ${
+              selectedButton === 1
+                ? "text-orange border-orange"
+                : "hover:text-orange hover:border-orange"
+            }`}
+            onClick={() => handleClick(1)}
+          >
+            FESTIVALS
+          </button>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: 2 }}
+          ref={ref}
+          className="z-1 flex flex-row justify-center items-start sm:w-[70%] lg:w-[50%] bg-transparent text-white"
+        >
+          <button
+            className={`max-w-[220px] min-w-[190px] ml-3 border rounded-xl sm:text-lg ${
+              selectedButton === 2
+                ? "text-orange border-orange"
+                : "hover:text-orange hover:border-orange"
+            }`}
+            onClick={() => handleClick(2)}
+          >
+            POP-UPS
+          </button>
+          <button
+            className={`max-w-[220px] min-w-[190px] ml-3 border rounded-xl sm:text-lg ${
+              selectedButton === 3
+                ? "text-orange border-orange"
+                : "hover:text-orange hover:border-orange"
+            }`}
+            onClick={() => handleClick(3)}
+          >
+            PRIVATE EVENTS
+          </button>
+        </motion.div>
       </div>
-    </div>
+    </>
   );
-}
+};
+
+export default AboutUs;
