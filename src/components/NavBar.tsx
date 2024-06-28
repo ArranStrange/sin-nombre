@@ -49,6 +49,7 @@ export default function NavDropDown() {
                   to="aboutus"
                   smooth={true}
                   duration={500}
+                  offset={-100}
                   onClick={handleNav}
                 >
                   About Us
