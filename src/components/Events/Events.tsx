@@ -26,7 +26,6 @@ export default function Events() {
     );
   };
   useEffect(() => {
-    // Scroll to the top when component mounts
     window.scrollTo(0, 0);
   }, []);
 
