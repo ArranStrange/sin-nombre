@@ -1,16 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { events } from "./eventsdata";
 
 export default function Events() {
-  // const [events, setEvents] = useState<Event[]>([]);
-
-  // useEffect(() => {
-  //   fetch("./events.json")
-  //     .then((response) => response.json())
-  //     .then((data) => setEvents(data))
-  //     .catch((error) => console.error("Error fetching events:", error));
-  // }, []);
-
   const handleLocationClick = (location: string) => {
     const query = encodeURIComponent(location);
     window.open(

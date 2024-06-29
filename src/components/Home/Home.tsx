@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import AboutUs from "./AboutUs";
 import FindUSCarousel from "./FindUsCarousel";
 import Landing from "./Landing";
-import Links from "./Links";
+import Links from "../Links";
 
 export default function Home() {
   useEffect(() => {

@@ -42,7 +42,7 @@ const AboutUs: React.FC = () => {
     <>
       <div
         id="aboutus"
-        className="flex flex-col h-[400px] w-full bg-black items-center"
+        className="flex flex-col h-[400px] w-full bg-black items-center  border-b-2 border-b-white"
       >
         <motion.div
           initial={{ opacity: 0 }}

@@ -27,7 +27,7 @@ export default function Gallery() {
   }, []);
 
   return (
-    <div className="w-full min-h-screen py-20 after:h-5 after:w-5 after:absolute">
+    <div className="w-full min-h-screen py-20 after:h-5 after:w-5 after:absolute ">
       <h1 className="text-xl text-white text-center pb-2 opacity-100 drop-shadow-lg">
         Gallery
       </h1>

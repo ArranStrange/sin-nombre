@@ -20,7 +20,7 @@ export default function ContactUsDropdown() {
   };
 
   return (
-    <div className="fixed top-0 right-0 z-20 ">
+    <div className="fixed top-0 right-0 z-20  ">
       <div className="relativ ">
         {dropdown && (
           <div className="bg-black opacity-80 w-screen h-screen flex flex-col items-end pt-14 pr-4">

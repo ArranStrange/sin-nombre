@@ -7,12 +7,12 @@ import MenuPage from "./components/MenuPage";
 import Gallery from "./components/Gallery";
 import Events from "./components/Events/Events";
 import Enquire from "./components/Enquire";
-import Links from "./components/Home/Links";
+import Links from "./components/Links";
 
 function App() {
   const location = useLocation();
   return (
-    <div className="App overflow-x-auto snap-x-mandatory">
+    <div className="App overflow-x-auto snap-x-mandatory ">
       <NavDropDown />
       <ContactUsDropdown />
       <Routes location={location} key={location.pathname}>

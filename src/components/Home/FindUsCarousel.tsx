@@ -103,7 +103,7 @@ const FindUSCarousel: React.FC = () => {
         <img
           alt="slideshow"
           src={images[currentIndex]}
-          className="object-cover h-full w-full drop-shadow-lg border-t-2 border-t-white"
+          className="object-cover h-full w-full drop-shadow-lg"
         />
       </div>
       {/* Overlay Text */}

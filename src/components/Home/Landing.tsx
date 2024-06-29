@@ -21,7 +21,7 @@ export default function Landing() {
   return (
     <div id="landing" className="overflow-x-auto snap-x-mandatory h-screen">
       <div
-        className="flex text-white justify-center items-center h-screen snap-start snap-align-start border-t-2 border-t-white"
+        className="flex text-white justify-center items-center h-screen snap-start snap-align-start "
         style={{
           backgroundImage: `url(${LandingPageImage})`,
           backgroundSize: "cover",
