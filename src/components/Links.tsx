@@ -31,14 +31,14 @@ const Links: React.FC = () => {
   };
 
   return (
-    <div className="mt-2 w-screen flex justify-center align-middle border-t-2 border-t-white ">
+    <div className="mt-2 w-screen flex justify-center align-middle ">
       <motion.div
         initial={{ opacity: 0 }}
         animate={inView ? { opacity: 1 } : { opacity: 0 }}
         transition={{ duration: 2 }}
         ref={ref}
         id="Links"
-        className="mt-6 pb-20 z-1 grid grid-cols-2 gap-4 justify-evenly items-end  mb-5 bg-transparent text-white"
+        className="mt-6 pb-20 z-1 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 justify-evenly items-end  mb-5 bg-transparent text-white"
       >
         {!isHomePage && (
           <LinkRouter to="/" onClick={handleNav}>
