@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const Enquire: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -37,6 +38,14 @@ const Enquire: React.FC = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Sin Nombre Enquiry Form</title>
+        <meta
+          name="description"
+          content="Cardiff Based Mexican Street Food Enquiry Food, Enquire for Weddings, Coporate Events, Pop-up and Festivals"
+        />
+        <link rel="canonical" href="/" />
+      </Helmet>
       <form
         onSubmit={handleSubmit}
         className="mt-[50px]  max-w-xl mx-auto p-4 bg-transparent  rounded-lg"

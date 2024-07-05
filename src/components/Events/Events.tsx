@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { events } from "./eventsdata";
+import { Helmet } from "react-helmet-async";
 
 export default function Events() {
   const handleLocationClick = (location: string) => {
@@ -15,6 +16,14 @@ export default function Events() {
 
   return (
     <div className="min-h-screen py-10 mb-10">
+      <Helmet>
+        <title>Sin Nombre Upcoming Events</title>
+        <meta
+          name="description"
+          content="Sin Nombre Authentic Mexican Upcoming Events"
+        />
+        <link rel="canonical" href="/events" />
+      </Helmet>
       <div className="container mx-auto px-4">
         <h1 className="mb-6 mt-6 text-white">Event Listings</h1>
         <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -15,6 +15,7 @@ import BeefBurrito from "./assets/images/Menu/beef burrito.png";
 import HalloumiTaco from "./assets/images/Menu/Halloumi Taco.png";
 import BuffaloKingPrawns from "./assets/images/Menu/chiptole prawns.png";
 import "../index.css";
+import { Helmet } from "react-helmet-async";
 
 export default function Menu() {
   const controls = useAnimation();
@@ -149,6 +150,15 @@ export default function Menu() {
 
   return (
     <>
+      <Helmet>
+        <title>Sin Nombre Menu</title>
+        <meta
+          name="description"
+          content="Cardiff Based Mexican Street Food Menu Page, See Cardiffs Best Mexican Street Food Menu"
+        />
+        <link rel="canonical" href="/" />
+      </Helmet>
+
       <div
         id="mains"
         className="flex flex-wrap justify-center items-center gap-4"
