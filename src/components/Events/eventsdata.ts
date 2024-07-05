@@ -39,12 +39,4 @@ export const events: Event[] = [
     thumbnail:
       "https://media-cdn.tripadvisor.com/media/photo-s/1c/e4/14/73/venue.jpg",
   },
-  {
-    id: 3,
-    name: "Rhostio Speciality Coffee",
-    location: "16C Crwys Rd, Cardiff",
-    date: "Every Friday Summer 2024",
-    thumbnail:
-      "https://europeancoffeetrip.com/wp-content/uploads/city-guides/cafes/4086/rhostiospecialtycoffee-cardiff-owners-12.jpeg",
-  },
 ];

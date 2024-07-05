@@ -72,3 +72,41 @@ h2 {
     transform: translateY(0);
   }
 }
+
+/* About Us Gallery */
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(-25%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  75% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.scrolling-wrapper {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.scrolling-content {
+  display: flex;
+  animation: scroll 120s linear infinite;
+}
+
+.scrolling-content img {
+  max-height: 11rem;
+  height: auto;
+  object-fit: cover;
+  filter: contrast(130%);
+  filter: brightness(75%);
+}
