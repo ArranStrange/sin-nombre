@@ -57,6 +57,7 @@ const AboutUs: React.FC = () => {
                 key={index}
                 src={image}
                 alt="about us images"
+                loading="lazy"
                 className="h-auto border-2 border-white rounded-3xl"
               />
             ))}
