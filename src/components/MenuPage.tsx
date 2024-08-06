@@ -161,7 +161,7 @@ export default function Menu() {
 
       <div
         id="mains"
-        className="flex flex-wrap justify-center items-center gap-4"
+        className=" flex flex-wrap justify-center items-center gap-4"
       >
         <h1 className="text-xl mt-[75px] text-white text-center pb-2 opacity-100 group-hover:opacity-0 transition-opacity duration-300 drop-shadow-lg">
           Mains

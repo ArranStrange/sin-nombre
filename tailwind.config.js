@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         black: "#0e0e0e",
         orange: "#f2662c",
+        grey: "#121212",
       },
       screens: {
         sm: "640px", // Default: 640px

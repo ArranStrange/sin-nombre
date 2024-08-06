@@ -88,7 +88,7 @@ const FindUSCarousel: React.FC = () => {
       transition={{ duration: 2 }}
       ref={ref}
       id="findus"
-      className="block h-screen text-white bg-black overflow-hidden relative"
+      className="block h-screen text-white bg-black border-b-2 border-white overflow-hidden relative"
     >
       <div className="flex flex-row justify-center z-10 w-full absolute top-0">
         <HiArrowSmLeft onClick={handlePrevious} size={30} className="mt-2" />

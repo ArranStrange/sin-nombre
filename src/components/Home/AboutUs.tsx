@@ -42,13 +42,13 @@ const AboutUs: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-evenly">
+    <div id="aboutus" className="flex flex-col items-center justify-evenly">
       <motion.div
-        className="flex flex-row justify-evenly items-center w-screen"
-        initial={{ opacity: 0 }}
-        animate={inView ? { opacity: 1 } : { opacity: 0 }}
-        transition={{ duration: 2 }}
-        ref={ref}
+        className="flex flex-row justify-evenly items-center w-screen mt-[-25px]"
+        // initial={{ opacity: 0 }}
+        // animate={inView ? { opacity: 1 } : { opacity: 0 }}
+        // transition={{ duration: 2 }}
+        // ref={ref}
       >
         <div className="scrolling-wrapper overflow-hidden h-44 w-screen">
           <div className="scrolling-content gap-2">
@@ -64,10 +64,7 @@ const AboutUs: React.FC = () => {
         </div>
       </motion.div>
 
-      <div
-        id="aboutus"
-        className="flex flex-col h-[400px] w-full bg-black items-center border-b-2 border-b-white"
-      >
+      <div className=" flex flex-col h-[400px] w-full  items-center border-b-2 border-b-white">
         <motion.div
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : { opacity: 0 }}

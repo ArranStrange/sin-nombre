@@ -12,7 +12,7 @@ import Links from "./components/Links";
 function App() {
   const location = useLocation();
   return (
-    <div className="App overflow-x-auto snap-x-mandatory ">
+    <div className="animated-gradient-background App overflow-x-auto snap-x-mandatory ">
       <NavDropDown />
       <ContactUsDropdown />
       <Routes location={location} key={location.pathname}>

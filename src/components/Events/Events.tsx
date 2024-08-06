@@ -30,7 +30,7 @@ export default function Events() {
           {events.map((event) => (
             <div
               key={event.id}
-              className="shadow-xl rounded-lg overflow-hidden"
+              className="bg-black bg-opacity-40 shadow-xl border-2 border-t-0 border-grey rounded-lg overflow-hidden"
             >
               <img
                 src={event.thumbnail}

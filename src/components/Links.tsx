@@ -31,7 +31,7 @@ const Links: React.FC = () => {
   };
 
   return (
-    <div className="mt-2 w-screen flex justify-center align-middle ">
+    <div className="bg-black bg-opacity-30  w-screen flex justify-center align-middle ">
       <motion.div
         initial={{ opacity: 0 }}
         animate={inView ? { opacity: 1 } : { opacity: 0 }}

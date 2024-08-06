@@ -10,11 +10,25 @@ html {
 }
 
 body {
-  background: #0e0e0e;
   font-family: "new-spirit", serif;
   font-weight: 700;
   font-style: normal;
   scroll-snap-type: x mandatory;
+  background: linear-gradient(300deg, #0e0e0e, #1c1414, #070606, #150d0d);
+  background-size: cover;
+  animation: gradient-animation 24s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 h1 {
@@ -109,4 +123,22 @@ h2 {
   object-fit: cover;
   filter: contrast(130%);
   filter: brightness(75%);
+}
+
+body .gradient-animated-background {
+  background: linear-gradient(300deg, #000000, #161414, #1c1313, #160606);
+  background-size: 240% 240%;
+  animation: gradient-animation 24s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
