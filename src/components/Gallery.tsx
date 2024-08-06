@@ -49,6 +49,7 @@ export default function Gallery() {
               src={image}
               alt={`Gallery image ${index + 1}`}
               onClick={() => handleImageClick(image)}
+              loading="lazy"
             />
           ))}
         </main>

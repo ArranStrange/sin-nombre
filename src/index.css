@@ -7,6 +7,9 @@
 
 html {
   scroll-snap-type: x mandatory;
+  background: linear-gradient(300deg, #0e0e0e, #1c1414, #070606, #150d0d);
+  background-size: cover;
+  animation: gradient-animation 24s ease infinite;
 }
 
 body {
@@ -141,4 +144,25 @@ body .gradient-animated-background {
   100% {
     background-position: 0% 50%;
   }
+}
+
+/* FIND US  */
+
+.image-container img {
+  transition: opacity 1s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.image-container img.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.image-container img.inactive {
+  opacity: 0;
+  z-index: 0;
 }

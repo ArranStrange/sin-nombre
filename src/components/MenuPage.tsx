@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, lazy } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import BeefTaco from "./assets/images/Menu/Beef Taco.png";
@@ -183,6 +183,7 @@ export default function Menu() {
             <img
               src={BeefTaco}
               alt="Beef Taco"
+              loading="lazy"
               className="rounded-3xl overflow-hidden"
             />
             <div className="absolute inset-0 bg-black opacity-0 transition-opacity group-hover:opacity-85 rounded-3xl"></div>
@@ -208,6 +209,7 @@ export default function Menu() {
             </h1>
             <img
               src={FishTaco}
+              loading="lazy"
               alt="Sea Bass Taco"
               className="rounded-3xl overflow-hidden "
             />
@@ -235,6 +237,7 @@ export default function Menu() {
             <img
               src={PorkBellyTaco}
               alt="Pork Belly Taco"
+              loading="lazy"
               className="rounded-3xl overflow-hidden "
             />
             <div className="absolute inset-0 bg-black opacity-0 transition-opacity group-hover:opacity-85 rounded-3xl"></div>
@@ -262,6 +265,7 @@ export default function Menu() {
             <img
               src={HalloumiTaco}
               alt="Halloumi Taco"
+              loading="lazy"
               className="rounded-3xl overflow-hidden "
             />
             <div className="absolute inset-0 bg-black opacity-0 transition-opacity group-hover:opacity-85 rounded-3xl"></div>
@@ -288,6 +292,7 @@ export default function Menu() {
             <img
               src={PorkBellyBurrito}
               alt="Pork Belly Burrito"
+              loading="lazy"
               className="rounded-3xl overflow-hidden "
             />
             <div className="absolute inset-0 bg-black opacity-0 transition-opacity group-hover:opacity-85 rounded-3xl"></div>
@@ -315,6 +320,7 @@ export default function Menu() {
             <img
               src={BeefBurrito}
               alt="Beef Burrito"
+              loading="lazy"
               className="rounded-3xl overflow-hidden "
             />
             <div className="absolute inset-0 bg-black opacity-0 transition-opacity group-hover:opacity-85 rounded-3xl"></div>
@@ -349,6 +355,7 @@ export default function Menu() {
             <img
               src={LoadedFries}
               alt="Beef Loaded Fries"
+              loading="lazy"
               className="rounded-3xl overflow-hidden "
             />
             <div className="absolute inset-0 bg-black opacity-0 transition-opacity group-hover:opacity-85 rounded-3xl"></div>
@@ -375,6 +382,7 @@ export default function Menu() {
             <img
               src={Nachos}
               alt="Nachos"
+              loading="lazy"
               className="rounded-3xl overflow-hidden "
             />
             <div className="absolute inset-0 bg-black opacity-0 transition-opacity group-hover:opacity-85 rounded-3xl"></div>
@@ -401,6 +409,7 @@ export default function Menu() {
             <img
               src={PorkBellyBites}
               alt="Pork Belly Bites"
+              loading="lazy"
               className="rounded-3xl overflow-hidden "
             />
             <div className="absolute inset-0 bg-black opacity-0 transition-opacity group-hover:opacity-85 rounded-3xl"></div>
@@ -427,6 +436,7 @@ export default function Menu() {
             <img
               src={Scallops}
               alt="Scallop"
+              loading="lazy"
               className="rounded-3xl overflow-hidden "
             />
             <div className="absolute inset-0 bg-black opacity-0 transition-opacity group-hover:opacity-85 rounded-3xl"></div>
@@ -453,6 +463,7 @@ export default function Menu() {
             <img
               src={Prawns}
               alt="Prawns"
+              loading="lazy"
               className="rounded-3xl overflow-hidden "
             />
             <div className="absolute inset-0 bg-black opacity-0 transition-opacity group-hover:opacity-85 rounded-3xl"></div>
@@ -479,6 +490,7 @@ export default function Menu() {
             <img
               src={LoadedHalloumi}
               alt="Halloumi Fries"
+              loading="lazy"
               className="rounded-3xl overflow-hidden "
             />
             <div className="absolute inset-0 bg-black opacity-0 transition-opacity group-hover:opacity-85 rounded-3xl"></div>
@@ -505,6 +517,7 @@ export default function Menu() {
             <img
               src={BuffaloKingPrawns}
               alt="Buffalo King Prawns"
+              loading="lazy"
               className="rounded-3xl overflow-hidden "
             />
             <div className="absolute inset-0 bg-black opacity-0 transition-opacity group-hover:opacity-85 rounded-3xl"></div>

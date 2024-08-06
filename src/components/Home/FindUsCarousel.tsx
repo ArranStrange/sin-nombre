@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import BigBanquet from "../assets/images/BigBanquet.png";
 import ForestFeastival from "../assets/images/ForestFeastival.png";
 import StickyFingers from "../assets/images/StickyFingers.png";
 import RoyalWelshShow from "../assets/images/RoyalWelshShow.png";
 import RhostioCoffee from "../assets/images/rhostio.png";
+import IntoTheWild from "../assets/images/IntoTheWild.png";
 import { HiArrowSmRight, HiArrowSmLeft } from "react-icons/hi";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -15,6 +16,41 @@ const FindUSCarousel: React.FC = () => {
     threshold: 0.3,
   });
 
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
+  const images: string[] = [
+    BigBanquet,
+    IntoTheWild,
+    ForestFeastival,
+    StickyFingers,
+    RoyalWelshShow,
+    RhostioCoffee,
+  ];
+  const imageTexts: string[] = [
+    "Street Food Circus",
+    "Into The Wild",
+    "Street Food Circus",
+    "Sticky Fingers",
+    "The Royal Welsh",
+    "Rhostio",
+  ];
+  const imageTexts3: string[] = [
+    "Caldicot Castle",
+    "Sussex",
+    "Merthyr Mawr",
+    "Roath",
+    "Llanelwedd",
+    "Roath",
+  ];
+  const imageTexts2: string[] = [
+    "Big Banquet",
+    "Chiddinglye Estate",
+    "Forest Feastival",
+    "Cardiff",
+    "Powys",
+    "Cardiff",
+  ];
+
   useEffect(() => {
     if (inView) {
       controls.start("visible");
@@ -23,50 +59,26 @@ const FindUSCarousel: React.FC = () => {
     }
   }, [controls, inView]);
 
-  const images: string[] = [
-    BigBanquet,
-    ForestFeastival,
-    StickyFingers,
-    RoyalWelshShow,
-    RhostioCoffee,
-  ];
-  const imageTexts: string[] = [
-    "Street Food Circus",
-    "Street Food Circus",
-    "Sticky Fingers",
-    "The Royal Welsh",
-    "Rhostio",
-  ];
-  const imageTexts3: string[] = [
-    "Caldicot Castle",
-    "Merthyr Mawr",
-    "Roath",
-    "Llanelwedd",
-    "Roath",
-  ];
-  const imageTexts2: string[] = [
-    "Big Banquet",
-    "Forest Feastival",
-    "Cardiff",
-    "Powys",
-    "Cardiff",
-  ];
-
-  let interval: NodeJS.Timeout;
-
-  useEffect(() => {
-    startInterval();
-    return () => clearInterval(interval);
-  }, []);
-
   const startInterval = () => {
-    interval = setInterval(() => {
+    intervalRef.current = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 7000);
   };
 
+  useEffect(() => {
+    startInterval();
+
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, []);
+
   const handlePrevious = () => {
-    clearInterval(interval); // Clear interval before changing index
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current); // Clear interval before changing index
+    }
     setCurrentIndex((prevIndex) =>
       prevIndex - 1 < 0 ? images.length - 1 : prevIndex - 1
     );
@@ -74,7 +86,9 @@ const FindUSCarousel: React.FC = () => {
   };
 
   const handleNext = () => {
-    clearInterval(interval); // Clear interval before changing index
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current); // Clear interval before changing index
+    }
     setCurrentIndex((prevIndex) =>
       prevIndex + 1 === images.length ? 0 : prevIndex + 1
     );
@@ -85,7 +99,7 @@ const FindUSCarousel: React.FC = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={inView ? { opacity: 1 } : { opacity: 0 }}
-      transition={{ duration: 2 }}
+      transition={{ duration: 1 }}
       ref={ref}
       id="findus"
       className="block h-screen text-white bg-black border-b-2 border-white overflow-hidden relative"
@@ -99,7 +113,7 @@ const FindUSCarousel: React.FC = () => {
         <h1>Where To Find Us</h1>
       </div>
 
-      <div className="absolute inset-0 flex justify-center items-center overflow-hidden">
+      <div className="image-container absolute inset-0 flex justify-center items-center overflow-hidden">
         <img
           alt="slideshow"
           src={images[currentIndex]}
